@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import './VerticalGradientApp.css';
+import pic from './pic.jpg';
+import pic1 from './pic1.jpg';
+import pic2 from './pic2.jpg';
+import pic3 from './pic3.jpg';
+import pic4 from './pic4.jpg';
+import pic5 from './pic5.jpg';
 
 // GradientBox Component
-const GradientBox = ({ gradient }) => (
-  <div className="gradient-box" style={{ background: gradient }} />
+const GradientBox = ({ gradient, imageSrc, label, children }) => (
+  <div className="gradient-box" style={{ background: gradient }}>
+    <div className="image-container">
+      {imageSrc && <img src={imageSrc} alt={label} className="employee-image" />}
+      <div className="employee-label">{label}</div>
+    </div>
+    {children}
+  </div>
 );
 
 // BottomNavItem Component
@@ -14,14 +26,69 @@ const BottomNavItem = ({ icon, label, onClick }) => (
   </div>
 );
 
-// FirstScreen Component
+// FirstScreen Component (Single Gradient Box with Table)
 const FirstScreen = ({ onLogClick }) => {
   return (
     <div className="app-container">
       <div className="gradient-container">
-        <GradientBox gradient="linear-gradient(135deg, #7FD1C8 0%, #A1EAF0 100%)" />
-        <GradientBox gradient="linear-gradient(135deg, #F0A1E8 0%, #C08CF0 100%)" />
-        <GradientBox gradient="linear-gradient(135deg, #F0A1A1 0%, #F0D6A1 100%)" />
+        <GradientBox gradient="linear-gradient(135deg, #F87171 25%, #0000FF 100%)" label="Employee Log">
+          <table className="employee-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>In</th>
+                <th>Out</th>
+                <th>Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* Add rows dynamically or manually here */}
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>09:00 AM</td>
+                <td>05:00 PM</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>09:30 AM</td>
+                <td>05:30 PM</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Mark Johnson</td>
+                <td>08:45 AM</td>
+                <td>04:45 PM</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Emily Davis</td>
+                <td>09:15 AM</td>
+                <td>05:15 PM</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Michael Brown</td>
+                <td>09:00 AM</td>
+                <td>05:00 PM</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Linda Wilson</td>
+                <td>09:05 AM</td>
+                <td>05:05 PM</td>
+                <td>8</td>
+              </tr>
+            </tbody>
+          </table>
+        </GradientBox>
       </div>
       <div className="bottom-nav">
         <BottomNavItem icon="≡" label="Log" onClick={onLogClick} />
@@ -32,17 +99,17 @@ const FirstScreen = ({ onLogClick }) => {
   );
 };
 
-// SecondScreen Component (3x2 Grid Layout)
+// SecondScreen Component (3x2 Grid Layout with individual image holders)
 const SecondScreen = ({ onLogClick }) => {
   return (
     <div className="app-container">
       <div className="gradient-container second-screen">
-        <GradientBox gradient="linear-gradient(135deg, #94D2BD 0%, #E9D8A6 100%)" />
-        <GradientBox gradient="linear-gradient(135deg, #E9D8A6 0%, #94D2BD 100%)" />
-        <GradientBox gradient="linear-gradient(135deg, #94A3B8 0%, #8B5CF6 100%)" />
-        <GradientBox gradient="linear-gradient(135deg, #8B5CF6 0%, #94A3B8 100%)" />
-        <GradientBox gradient="linear-gradient(135deg, #FB7185 0%, #F87171 100%)" />
-        <GradientBox gradient="linear-gradient(135deg, #F87171 0%, #FB7185 100%)" />
+        <GradientBox gradient="linear-gradient(135deg, #94D2BD 0%, #E9D8A6 100%)" imageSrc={pic} label="Employee 1" />
+        <GradientBox gradient="linear-gradient(135deg, #E9D8A6 0%, #94D2BD 100%)" imageSrc={pic1} label="Employee 2" />
+        <GradientBox gradient="linear-gradient(135deg, #94D2BD 0%, #E9D8A6 100%)" imageSrc={pic2} label="Employee 3" />
+        <GradientBox gradient="linear-gradient(135deg, #F87171 0%, #FB7185 100%)" imageSrc={pic3} label="Employee 4" />
+        <GradientBox gradient="linear-gradient(135deg, #FB7185 0%, #F87171 100%)" imageSrc={pic4} label="Employee 5" />
+        <GradientBox gradient="linear-gradient(135deg, #F87171 0%, #FB7185 100%)" imageSrc={pic5} label="Employee 6" />
       </div>
       <div className="bottom-nav">
         <BottomNavItem icon="≡" label="Log" onClick={onLogClick} />
