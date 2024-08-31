@@ -1,0 +1,56 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(to bottom, #e0d0ff, #fff8e0);
+    padding: 16px;
+  }
+  
+  .gradient-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .gradient-container.second-screen {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .gradient-box {
+    flex-grow: 1;
+    height: calc(220px);
+    border-radius: 24px;
+  }
+  
+  .gradient-container.second-screen .gradient-box {
+    flex-basis: calc(50% - 8px);
+  }
+  
+  .bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: bottom;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 9999px;
+    padding: 8px 32px;
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-icon {
+    font-size: 24px;
+  }
+  
+  .nav-label {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
