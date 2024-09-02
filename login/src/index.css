@@ -1,0 +1,202 @@
+/* General styles */
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Button styles */
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ff4d4d;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.3s ease;
+}
+
+.btn:hover {
+  border-color: #ff4d4d;
+  background-color: #ff0000;
+}
+
+/* Google button styles */
+.google-btn {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.3s ease;
+}
+
+.google-btn:hover {
+  border-color: #ccc;
+  background-color: #f0f0f0;
+}
+
+/* Country code styles */
+.country-code {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.country-code select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 100px;
+  font-size: 16px;
+}
+
+.country-code input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Additional styles for your card */
+:root {
+  font-family: 'Poppins', sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: linear-gradient(135deg, #8a2be2, #da70d6, #ff1493);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #8a2be2, #da70d6, #ff1493);
+  overflow: hidden; /* Prevents scrolling */
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 400px; /* Adjust this value to fit smaller screens */
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.3s ease;
+}
+
+button:hover {
+  border-color: #646cff;
+  background-color: #2a2a2a;
+}
+
+/* Style for close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+
+  .google-btn, .btn {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+}

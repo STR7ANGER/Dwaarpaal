@@ -1,0 +1,213 @@
+/* Root variables for theme colors */
+:root {
+  --primary-color: #F87171;
+  --secondary-color: #94D2BD;
+  --accent-color: #E9D8A6;
+  --background-color: #fff8e0;
+  --text-color: #ffffff;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #8a2be2, #da70d6, #ff1493);
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #8a2be2, #da70d6, #ff1493);
+  padding: 16px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 400px;
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.3s ease;
+}
+
+button:hover {
+  border-color: #646cff;
+  background-color: #2a2a2a;
+}
+
+/* Container for the gradient boxes or the table view */
+.gradient-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+/* Grid layout for the gradient boxes on the second screen */
+.gradient-container.second-screen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+  justify-items: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Style for each gradient box */
+.gradient-box {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  max-width: 100%; /* Ensure it does not overflow */
+}
+
+/* Styling the employee images within the gradient boxes */
+.employee-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Employee label below the image */
+.employee-label {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Bottom navigation bar styling */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  background: var(--secondary-color);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Individual items within the navigation bar */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-icon {
+  font-size: 1.5em;
+}
+
+.nav-label {
+  margin-top: 4px;
+}
+
+/* Table styling for the employee log */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #333; /* Text color for the table */
+  overflow-x: auto; /* Allow horizontal scrolling */
+}
+.employee-table th,
+.employee-table td {
+  padding: 12px;
+  border: 1px solid #ccc; /* Light gray border for table cells */
+  text-align: left;
+  background-color: transparent; /* No background color */
+}
+
+.employee-table th {
+  font-weight: bold;
+  background-color: var(--accent-color); /* Optional: Accent background for headers */
+  color: var(--text-color); /* Header text color */
+}
+
+
+.employee-table tr {
+  transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.employee-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Hover effect for rows */
+}
+/* Ensuring responsiveness for the table and other components */
+@media screen and (max-width: 600px) {
+  .gradient-container.second-screen {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .gradient-box {
+    width: 120px;
+    height: 120px;
+  }
+
+  .employee-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+
+  .employee-table {
+    font-size: 0.8em; /* Reduce font size */
+  }
+
+  .employee-table th,
+  .employee-table td {
+    padding: 8px; /* Reduce padding */
+  }
+
+  .employee-table th {
+    font-size: 0.9em; /* Reduce font size of headers */
+  }
+}
