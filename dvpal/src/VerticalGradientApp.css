@@ -1,0 +1,108 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e0d0ff, #fff8e0);
+  padding: 16px;
+}
+
+.gradient-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: center; /* Center the single box */
+}
+
+.gradient-container.second-screen {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gradient-box {
+  flex-grow: 1;
+  height: calc(200px);
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Make the single box take full width */
+  padding: 20px;
+  flex-direction: column;
+}
+
+.gradient-container.second-screen .gradient-box {
+  flex-basis: (220px);
+  height: (220px);
+  border-radius: 24px; /* Adjust this value to make the corners more or less round */
+}
+
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.employee-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.employee-label {
+  font-size: 24px; /* Increased from 16px to 24px */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 16px; /* Optional: Add some spacing below the label */
+}
+
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.employee-table th, .employee-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.employee-table th {
+  border-bottom: 2px solid #ffffff;
+  color: #fff;
+}
+
+.employee-table td {
+  color: #fff;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: bottom;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  padding: 8px 32px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-icon {
+  font-size: 24px;
+}
+
+.nav-label {
+  font-size: 12px;
+  margin-top: 4px;
+}
